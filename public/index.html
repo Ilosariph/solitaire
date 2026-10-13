@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solitaire</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+
+<div class="top-bar">
+  <h1>Soli<span>taire</span></h1>
+  <div class="timer-info">
+    <button id="darkToggle" class="icon-btn" title="Toggle dark mode">&#9790;</button>
+  </div>
+</div>
+
+<div class="top-controls">
+  <div class="controls-row">
+    <input type="text" id="seedInput" placeholder="seed">
+    <select id="drawSelect" title="Cards turned from the stock">
+      <option value="1" selected>Draw 1</option>
+      <option value="3">Draw 3</option>
+    </select>
+    <button id="retryBtn">Retry</button>
+    <button class="btn-accent" id="newBtn">New</button>
+  </div>
+  <div class="seed-display"><span id="seedDisplay"></span></div>
+</div>
+
+<div class="status-bar">
+  <span class="counter" id="movesDisplay">0 moves</span>
+  <div class="actions">
+    <button id="undoBtn" title="Undo (Z)">&#8630; Undo</button>
+    <button id="hintBtn" title="Hint (H)">Hint</button>
+  </div>
+  <span class="counter" id="timerDisplay">0:00</span>
+</div>
+
+<div class="board-wrap">
+  <div class="board" id="board">
+    <div class="win-banner" id="winBanner" hidden></div>
+  </div>
+</div>
+
+<p class="help">Drag cards, or tap one to send it to the best spot. <kbd>Z</kbd> undo · <kbd>H</kbd> hint · <kbd>D</kbd> draw</p>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
